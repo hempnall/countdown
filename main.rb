@@ -23,6 +23,9 @@ def evaluate_array(arr,newitem,targ,leng,opstack,op)
 	
 #	puts combos
 	
+
+	# we need a better way of detecting whether we have reached the target - i dont think 
+	# this will catch every case :-(
 	if newitem[0] == targ
 		puts "---------"
 		puts opstack.inspect
