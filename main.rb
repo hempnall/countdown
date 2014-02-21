@@ -1,6 +1,18 @@
-numbers = [100,2,75,3,7,8]
-target = 98
+numbers = [62,12,7,1,5,10]
+target = 130
 
+
+if ARGV.length != 7
+	puts "incorrect number of arguments"
+	puts "main.rb  n1 n2 n3 n4 n5 n6 target"
+	puts "e.g. main.rb  62 12 7 1 5 10 130"
+	exit
+end 
+
+
+target = ARGV[6].to_i
+numbers_str = ARGV.slice(0,6)
+numbers =  numbers_str.collect{|i| i.to_i}  
 
 def remove_numbers(arr,numa,numb)
 	arr.delete_at(arr.index(numa) || arr.length)
